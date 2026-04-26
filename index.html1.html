@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEN-5 KPOP</title>
+    <!-- Menggunakan Tailwind CSS untuk styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Menggunakan Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Animasi transisi halaman */
+        .fade-in {
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Navigasi (Header) -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="navigate('Home')">
+                    <i class="fa-solid fa-paper-plane text-indigo-600 text-2xl mr-2"></i>
+                    <span class="font-bold text-xl text-indigo-900">VANIA AYU DESWINTA</span>
+                </div>
+                <!-- Menu Desktop -->
+                <nav class="hidden md:flex space-x-8">
+                    <button id="nav-Home" onclick="navigate('Home')" class="nav-btn text-gray-500 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-300 px-1 pt-1 font-medium transition-colors">Beranda</button>
+                    <button id="nav-About" onclick="navigate('About')" class="nav-btn text-gray-500 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-300 px-1 pt-1 font-medium transition-colors">Biodata</button>
+                    <button id="nav-Personal-Information" onclick="navigate('Personal-Information')" class="nav-btn text-gray-500 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-300 px-1 pt-1 font-medium transition-colors">Latar Belakang</button>
+                    <button id="nav-Context" onclick="navigate('Context')" class="nav-btn text-gray-500 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-300 px-1 pt-1 font-medium transition-colors">Perbandingan Antar Grup</button>
+                    <button id="nav-Personal Goal" onclick="navigate('Personal-Goal')" class="nav-btn text-gray-500 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-300 px-1 pt-1 font-medium transition-colors">Target Personal</button>
+                    <button id="nav-Contact" onclick="navigate('Contact')" class="nav-btn text-gray-500 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-300 px-1 pt-1 font-medium transition-colors">Kontak</button>
+                </nav>
+                <!-- Tombol Menu Mobile -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="text-gray-500 hover:text-indigo-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- AREA KONTEN UTAMA -->
+    <main class="flex-grow">
+        
+        <!-- 1. HALAMAN BERANDA -->
+        <section id="Home" class="page-content fade-in max-w-6xl mx-auto px-4 py-16 text-center">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-6 uppercase tracking-tight">
+                K-POP GEN 5 <br>
+                <span class="text-indigo-600">TWS H2H BABYMONSTER DAN CORTIS</span>
+            </h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-10">
+                K-pop Generasi ke-5 (Gen-5) adalah era terbaru dalam industri musik Korea Selatan yang mulai berkembang sekitar tahun 2023–sekarang 
+            </p>
+            
+            <!-- INI TOMBOLNYA: Memanggil ID 'Tentang-Kpop' -->
+            <button onclick="navigate('Tentang-Kpop')" class="px-8 py-3 bg-indigo-600 text-white font-bold rounded-lg shadow-lg hover:bg-indigo-700 transition">
+                Pelajari Lebih Lanjut
+            </button>
+        </section>
+
+        <!-- 2. HALAMAN KHUSUS K-POP (Isi TWS dkk di sini) -->
+        <!-- Gunakan ID 'Tentang-Kpop' dan class 'hidden' -->
+        <section id="Tentang-Kpop" class="page-content hidden fade-in max-w-6xl mx-auto px-4 py-16">
+            <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                <h2 class="text-3xl font-bold text-indigo-900 mb-6">Informasi Grup Gen-5</h2>
+                <div class="space-y-6 text-gray-700">
+                    <p>👑 <strong>TWS:</strong> Debut 22 Januari 2024 (Pledis Entertainment). Konsep Boyhood Pop.</p>
+                    <p>👑 <strong>BABYMONSTER:</strong> Debut 1 April 2024 (YG Entertainment). Konsep Powerful Swag.</p>
+                    <p>👑 <strong>HEARTS2HEARTS:</strong> Girl group SM Entertainment yang debut pada tahun 2025.</p>
+                    <p>👑 <strong>CORTIS:</strong> Boy group dari BIGHIT MUSIC yang debut pada 18 Agustus 2025.</p>
+                </div>
+                <button onclick="navigate('Home')" class="mt-8 text-indigo-600 font-bold">← Kembali</button>
+            </div>
+        </section>
+
+        <!-- 3. HALAMAN LAINNYA (Biodata, dll) -->
+        <section id="About" class="page-content hidden fade-in max-w-6xl mx-auto px-4 py-16">
+            <h2 class="text-3xl font-bold">Biodata Vania</h2>
+            <p>Ini adalah halaman Biodata diri kamu.</p>
+        </section>
+
+    </main>
+
+    <!-- JAVASCRIPT: Otak dari website kamu -->
+    <script>
+        function navigate(pageId) {
+            // Sembunyikan semua section
+            const sections = document.querySelectorAll('.page-content');
+            sections.forEach(s => s.classList.add('hidden'));
+
+            // Tampilkan section yang ID-nya cocok
+            const target = document.getElementById(pageId);
+            if (target) {
+                target.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu) {
+                menu.classList.toggle('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
+        <!-- Menu Mobile (Tersembunyi secara default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <button onclick="navigate('Home'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-indigo-50">Beranda</button>
+                <button onclick="navigate('About'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50">Biodata</button>
+                <button onclick="navigate('Personal-Information'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50">Latar Belakang</button>
+                <button onclick="navigate('Context'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50">Perbandingan Antar Grup</button>
+                <button onclick="navigate('Personal-Goal'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50">Target Personal</button>
+                <button onclick="navigate('Contact'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50">Kontak</button>
+
+            </div>
+        </div>
+    </header>
+<!-- AREA KONTEN (Taruh di bawah </header>) -->
+<main class="mt-8">
+    
+    <!-- KONTEN BERANDA -->
+    <div id="Home" class="page-content max-w-6xl mx-auto px-4">
+        <h1 class="text-3xl font-bold text-indigo-900">Beranda</h1>
+        <p class="mt-4 text-gray-600">Halo! Saya Vania Ayu Deswinta. Ini adalah halaman utama saya.</p>
+    </div>
+
+    <!-- KONTEN BIODATA -->
+    <section id="About" class="page-content hidden max-w-6xl mx-auto px-4 py-12">
+    <div class="bg-white p-8 rounded-2xl shadow-xl text-center">
+        <h1 class="text-3xl font-bold text-indigo-900 mb-6">Biodata Diri</h1>
+        
+        <!-- BAGIAN FOTO -->
+        <div class="mb-6">
+            <img src="vania.jpg" alt="Foto Vania" class="mx-auto w-48 h-48 rounded-full object-cover border-4 border-indigo-600 shadow-lg">
+        </div>
+
+        <!-- BAGIAN TEKS -->
+        <div class="text-gray-700">
+            <p class="text-xl font-semibold">Vania Ayu Deswinta</p>
+            <p class="mt-2">Halo! Saya adalah pengembang web ini yang sangat tertarik dengan dunia K-Pop Generasi ke-5.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- KONTEN LATARBELAKANG -->
+    <div id="Personal-Information" class="page-content hidden max-w-6xl mx-auto px-4">
+        <h1 class="text-3xl font-bold text-indigo-900">Latar Belakang</h1>
+        <p class="mt-4 text-gray-600">Dunia musik Korea Selatan atau yang dikenal luas dengan sebutan K-Pop terus berkembang pesat dan memiliki penggemar yang tersebar di seluruh dunia. Saat ini, industri tersebut telah memasuki masa perkembangan generasi ke-5, di mana bermunculan banyak grup baru yang memiliki gaya, konsep, dan keunikan masing-masing. Di antara banyaknya grup yang baru muncul, terdapat TWS, BABYMONSTER, HEARTS2HEARTS, dan CORTIS yang mulai menarik perhatian masyarakat dan penggemar.Banyak penggemar maupun masyarakat umum yang masih kesulitan untuk mendapatkan informasi yang lengkap, terstruktur, dan terpercaya mengenai profil, sejarah pembentukan, karya yang telah dirilis, serta keunggulan dari setiap grup tersebut. Informasi yang ada saat ini tersebar di berbagai media sosial, berita, atau situs berita hiburan yang kadang tidak teratur dan sulit dicari secara sekaligus. Oleh karena itu, saya menyusun rencana pembuatan website profil perusahaan yang berfungsi sebagai pusat informasi yang memuat data lengkap dan terorganisir mengenai keempat grup pendatang baru ini. Melalui situs ini, pengguna dapat dengan mudah memahami identitas dan keistimewaan masing-masing kelompok, sehingga dapat mendukung pengenalan dan perkembangan mereka di industri hiburan.</p>
+        <p class="mt-4 text-gray-600">Industri K-Pop memasuki Generasi Kelima (Gen 5) secara masif sejak akhir 2023 hingga 2024. Berbeda dengan Gen 4 yang mengandalkan konsep dark/hip-hop berat, Gen 5 ditandai dengan kembalinya konsep easy-listening, visual yang menyegarkan, dan keterlibatan aktif dalam tren media sosial (TikTok/Reels). Definisi Gen 5: Grup yang memulai debut dengan lagu beraliran pop yang catchy dan berfokus pada live vocal yang solid.
+Karakteristik TWS (Pledis/HYBE): Mempopulerkan istilah "Boyhood Pop" dengan lagu debut "Plot Twist" yang sukses memuncaki chart Melon, menandai pergeseran popularitas boygroup ke arah musik yang lebih ringan.
+Karakteristik BABYMONSTER (YG Ent.): Menjadi pionir girlgroup Gen 5 dengan fokus pada vokal kuat dan penampilan high-energy, mencatat rekor streaming tertinggi di YouTube untuk grup baru.
+Karakteristik CORTIS (Pendatang Baru): Disebut sebagai "Visual Center" baru dengan aura kontras cerah-dingin, memperkuat narasi persaingan visual boygroup Gen 5 bersama TWS.
+        <img src=""
+   </div>
+
+    <!-- KONTEN PERBANDINGAN ANTAR GRUP -->
+      <div id="Context" class="page-content hidden max-w-6xl mx-auto px-4">
+        <h1 class="text-3xl font-bold text-indigo-900">Perbandingan Antar Grup</h1>
+        <p class="mt-4 text-gray-600">Informasi latar belakang...</p>
+    </div>
+
+    <!-- KONTEN TARGET PERSONAL -->
+     <div id="Personal-Goal" class="page-content hidden max-w-6xl mx-auto px-4">
+        <h1 class="text-3xl font-bold text-indigo-900">Target Personal</h1>
+        <p class="mt-4 text-gray-600">Informasi latar belakang...</p>
+    </div>
+
+    <!-- KONTEN KONTAK -->
+      <div id="Personal-Goal" class="page-content hidden max-w-6xl mx-auto px-4">
+        <h1 class="text-3xl font-bold text-indigo-900">Target Personal</h1>
+        <p class="mt-4 text-gray-600">Informasi latar belakang...</p>
+    </div>
+        <section id="Contact" class="page-content hidden fade-in py-12">
+            <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-extrabold text-gray-900">Hubungi Kami</h2>
+                    <p class="mt-2 text-gray-500">Punya pertanyaan? Jangan ragu untuk mengirim pesan.</p>
+                </div>
+                <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
+                        <input type="text" id="name" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Alamat Email</label>
+                        <input type="email" id="email" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Pesan</label>
+                        <textarea id="message" rows="4" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <i class="fa-solid fa-paper-plane mr-2 mt-0.5"></i> Kirim Pesan
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+
+<!-- JAVASCRIPT (Taruh di paling bawah sebelum </body>) -->
+<script>
+    function navigate(pageId) {
+        // 1. Sembunyikan semua konten yang punya class 'page-content'
+        const contents = document.querySelectorAll('.page-content');
+        contents.forEach(content => {
+            content.classList.add('hidden');
+        });
+    }
+
+        // 2. Tampilkan konten yang ID-nya diklik
+        const target = document.getElementById(pageId);
+        if (target) {
+            target.classList.remove('hidden');
+    }
+
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    }
+</script>
+    <!-- Konten Utama -->
+    <main class="flex-grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        
+        <!-- Halaman Beranda -->
+        <section id="Home" class="page-content fade-in">
+            <div class="text-center py-16 md:py-24">
+                <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                    <span class="block">K-POP GEN 5</span>
+                    <span class="block text-indigo-600">TWS H2H </span>
+                    <span class="block text-indigo-600">BABYMONSTER DAN CORTIS</span>
+                </h1>
+                <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                    K-pop Generasi ke-5 (Gen-5) adalah era terbaru dalam industri musik Korea Selatan yang mulai berkembang sekitar tahun 2023–sekarang. Generasi ini ditandai dengan konsep yang lebih fresh, visual yang kuat, serta penggunaan media sosial yang sangat aktif untuk berinteraksi dengan penggemar secara global.
+Grup-grup Gen-5 biasanya memiliki ciri khas seperti musik yang lebih mudah didengar (easy listening), konsep yang relate dengan kehidupan sehari-hari, serta performance yang tetap kuat dan modern. Selain itu, mereka juga dikenal lebih dekat dengan fans melalui konten digital seperti TikTok, YouTube, dan live streaming.
+                   </div>
+                    <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+                        <button onclick="showCustomAlert('Hai, have a nice day ya!')" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg transition-transform transform hover:scale-105">
+                            Klik Saya!
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Konten Utama di dalam Beranda -->
+<div class="max-w-6xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Kartu 1: Biodata -->
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-all cursor-pointer" onclick="navigate('About')">
+            <div class="inline-flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 text-indigo-600 mb-6">
+                <i class="fa-solid fa-book-open text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Biodata</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                Gelombang kelima yang menghantam dunia dengan kekuatan kreativitas yang murni. Definisi dari keberanian untuk mendobrak tradisi lama dan menciptakan identitas yang unik. Inilah rumah bagi bakat-bakat segar yang siap mengguncang panggung dunia dengan semangat yang tak akan pernah padam.
+            </p>
+            <button class="text-indigo-600 font-semibold hover:text-indigo-800 transition">
+                Lihat Detail
+            </button>
+        </div>
+
+        <!-- Kartu 2: Latar Belakang -->
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-all cursor-pointer" onclick="navigate('Personal-Information')">
+            <div class="inline-flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 text-indigo-600 mb-6">
+                <i class="fa-solid fa-circle-check text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Latar Belakang</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                Kemunculan Generasi 5 (Gen 5) dalam K-Pop menandai pergeseran besar dalam industri musik Korea yang kini jauh lebih global dan digital.
+            </p>
+            <button class="text-indigo-600 font-semibold hover:text-indigo-800 transition">
+                Lihat Detail
+            </button>
+        </div>
+
+        <!-- Kartu 3: Perbandingan Antar Grup -->
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-all cursor-pointer" onclick="navigate('Context')">
+            <div class="inline-flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 text-indigo-600 mb-6">
+                <i class="fa-solid fa-bullseye text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Perbandingan Antar Grup</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                Perbandingan antar grup di Generasi 5 (Gen 5) K-Pop menunjukkan persaingan yang sangat ketat dengan karakteristik yang berbeda-beda. Sejak dimulai pada tahun 2023, beberapa grup telah mendominasi berbagai aspek mulai dari vokal, visual, hingga jumlah pengikut di media sosial
+            </p>
+            <button class="text-indigo-600 font-semibold hover:text-indigo-800 transition">
+                Lihat Detail
+            </button>
+        </div>
+
+         <!-- Kartu 4: Target Personal -->
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-all cursor-pointer" onclick="navigate('Personal-Goal')">
+            <div class="inline-flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 text-indigo-600 mb-6">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Target Personal</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                Mencari makna di balik lirik-lirik segar dan harmoni yang belum pernah terdengar. Bagi fans, Gen 5 adalah pengingat bahwa keajaiban selalu bisa dimulai kembali, dan aku memilih untuk menjadi bagian dari keajaiban itu.
+            </p>
+            <button class="text-indigo-600 font-semibold hover:text-indigo-800 transition">
+                Cek Target
+            </button>
+        </div>
+
+
+            <!-- Kartu 5: Kontak -->
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-all cursor-pointer" onclick="navigate('Personal Goal')">
+            <div class="inline-flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 text-indigo-600 mb-6">
+                <i class="fa-solid fa-phone text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Kontak Kami</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                Hubungi dengan mengklik
+            </p>
+            <button class="text-indigo-600 font-semibold hover:text-indigo-800 transition">
+                Hubungi
+            </button>
+        </div>
+    </div>
+</div>
+ 
+      
+        <!-- Halaman Kontak -->
+        <section id="Contact" class="page-content hidden fade-in py-12">
+            <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-extrabold text-gray-900">Hubungi Kami</h2>
+                    <p class="mt-2 text-gray-500">Punya pertanyaan? Jangan ragu untuk mengirim pesan.</p>
+                </div>
+                <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
+                        <input type="text" id="name" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Alamat Email</label>
+                        <input type="email" id="email" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Pesan</label>
+                        <textarea id="message" rows="4" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <i class="fa-solid fa-paper-plane mr-2 mt-0.5"></i> Kirim Pesan
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-auto">
+        <div class="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-center text-sm text-gray-500">
+                VANIA AYU DESWINTA
+            </p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="text-gray-400 hover:text-gray-500"><i class="fa-brands fa-facebook text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-gray-500"><i class="fa-brands fa-instagram text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-gray-500"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notifikasi Pop-up Kustom (Pengganti Alert) -->
+    <div id="custom-alert" class="fixed bottom-5 right-5 bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 z-50 flex items-center pointer-events-none">
+        <i class="fa-solid fa-circle-check text-xl mr-3"></i>
+        <span id="custom-alert-text">Pesan berhasil dikirim!</span>
+    </div>
+
+    <!-- JavaScript untuk Interaktivitas -->
+    <script>
+        // Fungsi untuk berpindah halaman (Single Page Application logic)
+        function navigate(pageId) {
+            // 1. Sembunyikan semua konten halaman
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => {
+                page.classList.add('hidden');
+            });
+
+            // 2. Tampilkan halaman yang diklik
+            const targetPage = document.getElementById('page-' + pageId);
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+            }
+
+            // 3. Reset gaya semua tombol navigasi desktop
+            const navBtns = document.querySelectorAll('.nav-btn');
+            navBtns.forEach(btn => {
+                // Hapus gaya aktif
+                btn.classList.remove('text-indigo-600', 'border-indigo-600');
+                // Tambahkan gaya pasif
+                btn.classList.add('text-gray-500', 'border-transparent');
+            });
+
+            // 4. Tambahkan gaya aktif ke tombol yang sedang diklik
+            const activeBtn = document.getElementById('nav-' + pageId);
+            if (activeBtn) {
+                activeBtn.classList.remove('text-gray-500', 'border-transparent');
+                activeBtn.classList.add('text-indigo-600', 'border-indigo-600');
+            }
+            
+            // Scroll ke atas dengan halus saat ganti halaman
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Fungsi untuk buka/tutup menu di HP
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Fungsi menampilkan notifikasi/alert kustom
+        function showCustomAlert(message) {
+            const alertBox = document.getElementById('custom-alert');
+            const alertText = document.getElementById('custom-alert-text');
+            
+            alertText.innerText = message;
+            
+            // Munculkan
+            alertBox.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            alertBox.classList.add('translate-y-0', 'opacity-100');
+
+            // Hilangkan setelah 3 detik
+            setTimeout(() => {
+                alertBox.classList.remove('translate-y-0', 'opacity-100');
+                alertBox.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            }, 3000);
+        }
+
+        // Fungsi untuk menangani form kontak saat disubmit
+        function handleContactSubmit(event) {
+            event.preventDefault(); // Mencegah halaman me-refresh
+            
+            // Ambil data (opsional, hanya untuk demonstrasi)
+            const name = document.getElementById('name').value;
+            
+            // Tampilkan notifikasi sukses
+            showCustomAlert(`Terima kasih, ${name}! Pesan Anda telah "terkirim". (Ini hanya simulasi)`);
+            
+            // Kosongkan form
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+    <!-- ... kode konten lainnya ... -->
+
+    <script>
+        // Fungsi untuk berpindah menu
+        function navigate(pageId) {
+            // 1. Ambil semua bagian konten
+            const sections = document.querySelectorAll('.page-content');
+            
+            // 2. Sembunyikan semua bagian
+            sections.forEach(s => {
+                s.classList.add('hidden');
+            });
+
+            // 3. Tampilkan bagian yang ID-nya sesuai dengan tombol yang diklik
+            const target = document.getElementById(pageId);
+            if (target) {
+                target.classList.remove('hidden');
+            }
+        }
+
+        // Fungsi untuk menu HP (Mobile)
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu) {
+                menu.classList.toggle('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>
